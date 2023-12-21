@@ -136,10 +136,6 @@
     max-width: 540px;
   }
 
-  .footer__title {
-    margin-bottom: 29px;
-  }
-
   .footer__logo-link {
     margin-bottom: 8px;
   }
@@ -257,7 +253,6 @@
     padding: 38px 60px 33px 39px;
   }
 
-
   .footer__container {
     flex-direction: column-reverse;
   }
@@ -278,8 +273,12 @@
     max-width: 541px;
   }
 
-  .form__input {
-    margin-bottom: 27px;
+  .form__label {
+    margin-bottom: 10px;
+  }
+
+  .form__input--textarea {
+    margin-bottom: 20px;
   }
 
 }
@@ -516,13 +515,21 @@
 
   .footer__title {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: -16px;
+  }
+
+  .form__label {
+    margin-bottom: 6px;
   }
 
   .form__input {
-    margin-bottom: 26px;
+    margin-bottom: -17px;
     font-size: 14px;
     padding: 16px 24px;
+  }
+
+  .form__input--textarea {
+    margin-bottom: 16px;
   }
 
   .form__btn-wrap {
