@@ -190,9 +190,79 @@ img {
 }
 
 .search {
-  width: 24px;
-  height: 24px;
+  width: 180px;
 }
+
+.search-form {
+  position: relative;
+}
+
+/* Скрытие значка по умолчанию */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.search-form__input {
+  padding-right: 30px;
+  border: none;
+  border-bottom: 1px solid #FF9900;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--black-color);
+}
+
+.search-form__input::placeholder {
+  color: var(--gray-color);
+}
+
+.search-form__close {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.search-form__close rect {
+  stroke: var(--gray-color);
+  fill: var(--gray-color);
+  transition: stroke .3s ease-in-out, fill .3s ease-in-out;
+}
+
+.search-form__close circle {
+  stroke: var(--gray-color);
+  transition: stroke .3s ease-in-out;
+}
+
+.search-form__close:focus {
+  outline-offset: 2px;
+  outline: 1px solid var(--gold-color);
+}
+
+.search-form__close:hover rect {
+  stroke: var(--gold-color);
+  fill: var(--gold-color);
+}
+
+.search-form__close:hover circle {
+  stroke: var(--gold-color);
+}
+
+.search-form__close:active rect {
+  stroke: var(--black-color);
+  fill: var(--black-color);
+}
+
+.search-form__close:active circle {
+  stroke: var(--black-color);
+}
+
+
+
 
 .search__btn path {
   stroke: var(--black-color);
