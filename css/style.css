@@ -190,11 +190,24 @@ img {
 }
 
 .search {
-  width: 180px;
+  width: 210px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .search-form {
+  display: none;
+  width: 180px;
+  margin-right: auto;
   position: relative;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.search-form--visible {
+  display: block;
+  transform: scaleX(1);
 }
 
 /* Скрытие значка по умолчанию */
@@ -208,12 +221,18 @@ input[type="search"]::-webkit-search-results-decoration {
 .search-form__input {
   padding-right: 30px;
   border: none;
-  border-bottom: 1px solid #FF9900;
+  border-bottom: 1px solid var(--gray-color);
   width: 100%;
   font-size: 20px;
   font-weight: 400;
   line-height: 23px;
   color: var(--black-color);
+  transition: border-color .3s ease-in-out;
+}
+
+.search-form__input:focus {
+  outline: none;
+  border-color: var(--gold-color);
 }
 
 .search-form__input::placeholder {
@@ -224,6 +243,8 @@ input[type="search"]::-webkit-search-results-decoration {
   position: absolute;
   top: 50%;
   right: 0;
+  width: 24px;
+  height: 24px;
   transform: translateY(-50%);
 }
 
